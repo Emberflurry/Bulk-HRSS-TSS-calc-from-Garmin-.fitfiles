@@ -100,8 +100,9 @@ def difference_between_dates(date1, date2):
     secs = ((date2 - date1).seconds)
     # minutes = (date2 - date1).minutes
     # hours = (date2 - date1).hours * 60
-    days = (date2 - date1).days * 24 * 60 * 60
-    return secs + days
+    # days = (date2 - date1).days * 24 * 60 * 60 (was redundant and didn't change result(s)...og was return secs + days
+    mins = secs/60
+    return mins 
 
 # Loop through fitfile directory
 for filename in tqdm(os.listdir(directory)):
