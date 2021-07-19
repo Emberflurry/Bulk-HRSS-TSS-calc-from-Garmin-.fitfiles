@@ -30,6 +30,7 @@ sixtyatLTHR_SS = 60 * my_hrrAtLT * my_baseconstant * (eulersNum ** (my_yvalue * 
 N_ova_hundy = sixtyatLTHR_SS / 100
 hundy_ova_N = 100 / sixtyatLTHR_SS
 
+#if files need renaming
 """rename_dict = {'FIT': 'fit'}
 for filename in os.listdir(directory):
     base_file, ext = os.path.splitext(filename)
