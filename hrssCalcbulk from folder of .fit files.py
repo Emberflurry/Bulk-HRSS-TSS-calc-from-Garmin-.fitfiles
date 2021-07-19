@@ -30,6 +30,7 @@ sixtyatLTHR_SS = 60 * my_hrrAtLT * my_baseconstant * (eulersNum ** (my_yvalue * 
 N_ova_hundy = sixtyatLTHR_SS / 100
 hundy_ova_N = 100 / sixtyatLTHR_SS
 
+#if files need renaming
 """rename_dict = {'FIT': 'fit'}
 for filename in os.listdir(directory):
     base_file, ext = os.path.splitext(filename)
@@ -100,7 +101,8 @@ def difference_between_dates(date1, date2):
     # minutes = (date2 - date1).minutes
     # hours = (date2 - date1).hours * 60
     # days = (date2 - date1).days * 24 * 60 * 60 (was redundant and didn't change result(s)...og was return secs + days
-    return secs 
+    mins = secs/60
+    return mins 
 
 # Loop through fitfile directory
 for filename in tqdm(os.listdir(directory)):
