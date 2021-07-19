@@ -137,3 +137,6 @@ for filename in tqdm(os.listdir(directory)):
         else:
             print("issue w HR in: " + filename + "  :_(...either lacking HR data or is mislabeled, i think.")
             continue
+   #HERE COULD ADD THE FIT->fit CONVERTER CODE TO FIX IF ENDS IN .FIT and not .fit
+            
+                    
