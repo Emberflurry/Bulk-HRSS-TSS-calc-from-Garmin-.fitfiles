@@ -16,7 +16,7 @@ def main():
     files = os.listdir()
     fit_files = [file for file in files if file[-4:].lower() == '.fit']
     for file in fit_files:
-        new_filename = file[:-4] + 'cvt.csv'
+        new_filename = file[:-4] + '.csv'
         if os.path.exists(new_filename):
             # print('%s already exists. skipping.' % new_filename)
             continue
