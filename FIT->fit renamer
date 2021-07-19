@@ -1,0 +1,22 @@
+import os
+import datetime
+from fitparse import FitFile
+import pandas as pd
+import numpy as np
+#import matplotlib.pyplot as plt  (not needed I guess)
+from tqdm import tqdm
+from datetime import datetime
+import re
+
+directory = 'fitfiles'
+
+rename_dict = {'FIT': 'fit'}
+for filename in os.listdir(directory):
+    base_file, ext = os.path.splitext(filename)
+    ext = ext.replace('.','')
+    if ext in rename_dict:
+        new_ext = rename_dict[ext]
+        new_file = base_file + '.' + new_ext
+        old_path = os.path.join(directory, filename)
+        new_path = os.path.join(directory, new_file)
+        os.rename(old_path, new_path)
