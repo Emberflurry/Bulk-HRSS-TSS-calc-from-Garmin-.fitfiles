@@ -129,7 +129,7 @@ for filename in tqdm(os.listdir(directory)):
             #print(hartreight)
             HRrez = [(i - my_rhr)/(my_maxhr - my_rhr) for i in hartreight]
             #print(HRrez)
-            HRrezXtime = [(deltaTs[i]) * (HRrez[i]) for i in deltaTs]
+            HRrezXtime = [(deltaTs[i]) * (HRrez[i]) for i in deltaTs] #doesnt like the decimal values, thinks they are the index#s or something, need a total rewrite of thsi section to accomodate the seconds->minutes correction
             #print(HRrezXtime)
             HRrezXtimeXbase = [i * my_baseconstant for i in range(len(HRrezXtime))]
             #print(HRrezXtimeXbase)
